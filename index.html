@@ -9,9 +9,18 @@
 <meta name="author" content="Punreliable">
 
 <title>Coin</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y6SY26NYT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-4Y6SY26NYT');
+</script>
 <link rel="canonical" href="http://coin.punreliable.com">
-<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+<link href="http://coin.punreliable.com/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+<link href="http://coin.punreliable.com/node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" />
 
 <meta name="theme-color" content="#65655E">
 
@@ -53,7 +62,7 @@
   }
 
 </style>
-
+<script src="https://kit.fontawesome.com/80eb7b1769.js" crossorigin="anonymous"></script>
 <link href="styles/styles.css" rel="stylesheet">
 
 </head>
@@ -66,9 +75,9 @@
 
 		<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
 
-			<a href="http://localhost/punreliable/coin" class="d-flex align-items-center text-dark text-decoration-none">
-				<img src="http://localhost/punreliable/coin/logo-punreliable-gamja_flower.svg" alt="Punreliable" title="Punreliable Logo" class="logo-punreliable img-fluid" height="32" width="32" />
-				<span class="fs-4">Flip a Coin!</span>
+			<a href="http://coin.punreliable.com" class="d-flex align-items-center text-dark text-decoration-none">
+				<img src="http://coin.punreliable.com/logo-punreliable-gamja_flower.svg" alt="Punreliable" title="Punreliable Logo" class="logo-punreliable img-fluid" height="32" width="32" />
+				<span class="mx-2 fs-4">Flip a Coin!</span>
 			</a>
 
 		</header>
@@ -77,20 +86,19 @@
 
 			<header>
 
-				<h1 class="responsive-h1">Decisions as Easy as Flipping a Coin</h1>
+				<h1 class="responsive-h1 my-4">Decisions Made Easy</h1>
 
 			</header>
 
-			<p class="fs-5 col-md-8">
-				Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.
+			<p class="fs-5 my-6">
+				Coin flipping, coin tossing, or heads or tails is the practice of throwing a coin in the air and checking which side is showing when it lands, in order to choose between two alternatives, heads or tails, sometimes used to resolve a dispute between two parties. It is a form of sortition which inherently has two possible outcomes. The party who calls the side that is facing up when the coin lands wins.
 			</p>
 
-			<div class="mb-5">
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-				<a href="#flip" class="btn btn-primary btn-lg px-4" id="button-coin">Flip a Coin!</a>
+			<div class="my-4">
+
+				<button type="button" class="btn btn-primary btn-lg px-4" id="flip-button" data-toggle="modal" data-target="#coinModal">
+					<i class="fa-solid fa-rotate"></i> <span class="ml-4">Flip Coin!</span>
+				</button>
 
 			</div>
 
@@ -103,28 +111,53 @@
 <footer class="pt-5 my-5 border-top">
 Created by Punreliable. Powered by Bootstrap &copy; 2022
 </footer>
+
 <!-- Modal -->
-<div class="modal fade" id="coinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="coinModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
 	<div class="modal-content">
 	  <div class="modal-header">
-		<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
+		<h5 class="modal-title" id="coinModal">Result</h5>
+		<button type="button" class="close button-close" data-dismiss="modal" aria-label="Close">
+			<i class="fa-solid fa-circle-xmark"></i>
+		  <span aria-hidden="true"></span>
 		</button>
 	  </div>
 	  <div class="modal-body">
-		...
+		<h3 class="black-text text-center my-4">
+			<i class="fa-solid fa-coin"></i>
+			Heads
+		</h3>
 	  </div>
 	  <div class="modal-footer">
-		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		<button type="button" class="btn btn-primary">Save changes</button>
+		<button type="button" id="button-close" class="btn btn-primary button-close" data-dismiss="modal">Save changes</button>
 	  </div>
 	</div>
   </div>
 </div>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-<script src="scripts/app.js"></script>
 
+<script src="http://coin.punreliable.com/node_modules/jquery/dist/jquery.js"></script>
+<script src="http://coin.punreliable.com/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+<!--<script src="scripts/app.js"></script>-->
+<script>
+/*
+	$('#coinModal').on('shown.bs.modal', function () {
+	  $('#flip-button').trigger('focus')
+	})
+	*/
+
+	$('#flip-button').click(function() {
+		// console.log('Hello World');
+		$('#exampleModal').modal('show');
+	});
+
+
+	$('.button-close').click(function() {
+		// console.log('Bye World');
+		$('#exampleModal').modal('hide');
+	});
+
+</script>
 </body>
 </html>
