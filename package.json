@@ -6,5 +6,8 @@
   "repository": "https://github.com/punreliable/coin.git",
   "author": "Brian <brian@punreliable.com>",
   "license": "CCO",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }
