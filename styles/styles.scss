@@ -21,3 +21,33 @@ $color-fifth:     $color-granite-grey;
 
 $color-bg: $color-granite-grey;
 $font-color-primary: $color-granite-grey;
+
+
+body {
+
+	background-color: $color-granite-grey;
+
+	height: 100%;
+	width: 100%;
+
+
+
+}
+
+.page {
+
+	background-color: $color-ghost-white;
+	height: auto;
+	width: 100%;
+
+}
+
+.container {
+
+	.text-grey {
+
+		color: $color-granite-grey;
+
+	}
+
+}
