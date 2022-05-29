@@ -1,0 +1,13 @@
+{
+    "name": "brian/coin",
+    "description": "For heads or tails decisions",
+    "type": "project",
+    "license": "CCO",
+    "authors": [
+        {
+            "name": "Brian",
+            "email": "brian@punreliable.com"
+        }
+    ],
+    "require": {}
+}

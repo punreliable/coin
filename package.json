@@ -1,0 +1,10 @@
+{
+  "name": "coin",
+  "version": "1.0.0",
+  "description": "For choosing heads or tails",
+  "main": "index.js",
+  "repository": "https://github.com/punreliable/coin.git",
+  "author": "Brian <brian@punreliable.com>",
+  "license": "CCO",
+  "private": false
+}
