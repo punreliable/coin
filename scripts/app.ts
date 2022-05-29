@@ -1,19 +1,16 @@
 //@ts-check
 
+say_hello()
 
-say_hello();
-
-// Coin
-// type Coin
-
-
-function say_hello()
+function say_hello():void
 {
-console.log('Hello World!');
+console.log('Hello World!')
 }
 
-$("#coinModal").modal()
-
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
 
 /*
 
